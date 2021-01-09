@@ -8,7 +8,13 @@ This template has been created as an extremely stripped down version of starting
 
 ## How to Use
 ## Just to Get It Working
-If you just want to get this thing working, follow the steps below:    
+If you just want to get this thing working, follow the steps below:   
+- Setup your virtual environment
+    - depending on your operating system, make a virtual environment (virtualenv, pipenv, pyenv)
+    - activate this virtual environment:
+        - Mac OS: source /path/to/virtualenv/bin/activate
+        - Windows: /path/to/virtualenv/Scripts/activate
+    - install requirements by running `pip install -r requirements.txt` in the terminal
 - Add a .env file in the 'project direct and, in this file, insert:
     - SECRET_KEY = <random 50 character secret key>
     - DEBUG = True
