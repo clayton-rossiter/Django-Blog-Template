@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}{% endblock css %}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    {% comment %} navbar {% endcomment %}
+    {% include "navbar.html" %}
+
+    {% comment %} body content {% endcomment %}
+    {% block content %}{% endblock content %}
+
+    {% comment %} javascript {% endcomment %}
+    {% block js %}{% endblock js %}
+
+    {% comment %} footer {% endcomment %}
+    {% include "footer.html" %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="blog__container">
+    <h1 class="page__title">
+        {{ object.title }}
+    </h1>
+    <span class="index__divider"></span>
+    <h4 class="blog__blurb">{{ object.blurb }}</h4>
+    <p class="blog__content">{{ object.content }}</p>
+</div>
+{% endblock %}

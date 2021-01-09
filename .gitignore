@@ -1,0 +1,10 @@
+db.sqlite3
+
+project/__pycache__/
+project/.env
+
+index/__pycache__/
+index/migrations/
+
+blog/__pycache__/
+blog/migrations/

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Blog
+{% endblock title %}
+
+{% block content %}
+<div class="blog__container">
+    <h1 class="page__title">
+        Blog
+    </h1>
+    <span class="index__divider"></span>
+    <div class="blog__blog_list">
+        {% for blog in object_list %}
+            {% ifequal blog.status 1 %}
+            <div class="blog__blog_post">
+                <a href="{{ blog.get_absolute_url }}"><h3>{{ blog.title }}</h3></a>
+            </div>
+            {% endifequal %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
