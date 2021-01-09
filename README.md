@@ -7,7 +7,15 @@ This template has been created as an extremely stripped down version of starting
 
 
 ## How to Use
+## Just to Get It Working
+If you just want the thing woring, follow the steps below:    
+- Add a .env file in the 'project direct and add:
+    - SECRET_KEY = <random 50 character secret key>
+    - DEBUG = True
+- run '''python manage.py migrate'''    
+
 The views in this project use Class-based views for ease of deploying multiple pages and making use of the awesome get_context_data and get_queryset functions inherited from the ListView and DetailView classes.
+
 
 ## How to Adapt
 ### Django Components
