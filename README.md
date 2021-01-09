@@ -15,7 +15,7 @@ If you just want to get this thing working, follow the steps below:
         - Mac OS: source /path/to/virtualenv/bin/activate
         - Windows: /path/to/virtualenv/Scripts/activate
     - install requirements by running `pip install -r requirements.txt` in the terminal
-- Add a .env file in the 'project direct and, in this file, insert:
+- Add a .env file in the 'project' directory and, in this file, insert:
     - SECRET_KEY = <random 50 character secret key>
     - DEBUG = True
 - run `python manage.py migrate`    
