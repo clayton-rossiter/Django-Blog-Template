@@ -1,0 +1,212 @@
+:root {
+    --nav-height: 10vh;
+
+    --color-primary: #1D3542;
+    --color-secondary: #B9B4B0;
+    --color-tertiary: #222B2B;
+    --color-quart: #BFA58A;
+    
+}
+
+/* general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+main {
+    min-height: 80vh;
+    margin-top: 10vh;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* end general */
+
+
+/* navbar */
+nav {
+    height: var(--nav-height);
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.nav__left {
+    margin-left: 3vw;
+    width: 40%;
+}
+.nav__right {
+    width: 40%;
+}
+.nav__links {
+    display: flex;
+    justify-content: space-around;
+}
+.nav__links > li {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.nav__links > li:hover {
+    /* transform: translateY(-5px); */
+    color: var(--color-quart);
+    border-bottom: solid 1px var(--color-quart);
+    transition: all 0.3s ease;
+}
+.nav__burger {
+    width: 30px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;  
+    cursor: pointer;
+    position: absolute;
+    top: calc(5vh - 15px);
+    right: 3vh;
+}
+.nav__line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-secondary);
+}
+@media screen and (max-width: 600px) {
+    .nav__links {
+        z-index: 3;
+        background-color: var(--color-primary);
+        position: absolute;
+        flex-direction: column;
+        height: 50vh;
+        width: 50%;
+        top: var(--nav-height);
+        transform: translateX(80%);
+        align-items: center;
+    }
+    .nav__burger {
+        display: flex;
+    }
+}
+.nav__active {
+    transform: translateX(-20%);
+    transition: transform 0.5s ease;
+}
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+/* end navbar */
+
+
+/* footer */
+footer {
+    min-height: 10vh;
+    background-color: var(--color-tertiary);
+    display: flex;
+    flex-direction:column;
+    color: var(--color-quart);
+    text-align: center;
+}
+.footer__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.footer__section {
+    display: flex;
+    flex-direction: column;
+}
+.footer__header_link {
+    font-size: 1.2em;
+    margin-top: 2vh;
+}
+.footer__header_links {
+    display: flex;
+    flex-direction: column;
+}
+.footer__header_links > a {
+    text-decoration: none;
+    color: inherit;
+}
+.footer__header_links > a:hover {
+    text-decoration: underline;
+}
+.footer__copyright {
+    margin-top: 2vh;
+}
+@media screen and (max-width: 600px) {
+    .footer__links {
+        flex-direction: column;
+    }
+}
+/* end footer */
+
+
+/* index */
+.index__hero_shot {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+}
+.index__hero_shot > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+}
+.index__hero_shot_glass {
+    height: 40%;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+}
+.index__hero_shot_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.index__container {
+    width: 90%;
+    margin: auto;
+}
+@media screen and (max-width: 1024px) { /* ipad */
+    .index__hero_shot > img {
+        width: 120%;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .index__hero_shot > img {
+        width: 140%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .index__hero_shot > img {
+        width: 250%;
+        left: 35%;
+    }
+}
+/* end index */

@@ -1,5 +1,22 @@
 {% load static %}
 
-<nav>
-    navbar here
+<nav role="responsive">
+    <div class="nav__left">
+        <a href="{% url 'index:index' %}">
+            <h3>Some logo here</h3>
+        </a>
+    </div>
+    <div class="nav__right">
+        <ul class="nav__links">
+            <li class="nav__link"><a href="{% url 'index:index' %}">Home</a></li>
+            <li class="nav__link"><a href="">About</a></li>
+            <li class="nav__link"><a href="{% url 'blog:blog-list' %}">Blog</a></li>
+            <li class="nav__link"><a href="">Contact</a></li>
+        </ul>
+        <div class="nav__burger">
+            <div class="nav__line"></div>
+            <div class="nav__line"></div>
+            <div class="nav__line"></div>
+        </div>
+    </div>
 </nav>
