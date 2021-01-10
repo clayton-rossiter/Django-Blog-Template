@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # django apps
     'index',
-    'blog'
+    'blog',
     # third party apps
 ]
 

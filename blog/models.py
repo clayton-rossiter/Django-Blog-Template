@@ -17,6 +17,9 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def __unicode__(self):
+        return self.name
 
 
 class BlogPost(models.Model):
@@ -40,6 +43,9 @@ class BlogPost(models.Model):
 
     class Meta:
         ordering = ['-created_on']
+
+    def __str__(self):
+        return self.title
 
     def __str__(self):
         return self.title
